@@ -57,6 +57,7 @@ Built with **Streamlit** and supports multiple embedding models (SBERT, OpenAI, 
 ---
 
 ## 📂 File Structure
+```
 Candidate_recommandation/
 │
 ├── .streamlit/
@@ -79,7 +80,7 @@ Candidate_recommandation/
 ├── README.md
 ├── requirements.txt
 └── temp.py
-
+```
 ---
 
 ## 🖥️ Usage
@@ -123,5 +124,6 @@ _Contact: [darjijay972@gmail.com](mailto:darjijay972@gmail.com)_
 
 
 ## 📂 File Structure
+
 
 
