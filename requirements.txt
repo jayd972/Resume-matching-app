@@ -1,0 +1,7 @@
+streamlit
+sentence-transformers
+scikit-learn
+pdfplumber
+python-docx
+google-generativeai
+torch
