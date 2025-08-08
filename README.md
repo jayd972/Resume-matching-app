@@ -26,6 +26,62 @@ Built with **Streamlit** and supports multiple embedding models (SBERT, OpenAI, 
 
 ---
 
+## 🚀 How to Run
+
+1. **Clone the repo**
+
+    ```bash
+    git clone https://github.com/yourusername/candidate-recommendation-engine.git
+    cd candidate-recommendation-engine
+    ```
+
+2. **Install dependencies**
+
+    > (Python 3.8+ recommended)
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. **Set API Keys**  
+   - **Google Gemini:**  
+     - Add your Gemini API key in `.env` as `GEMINI_API_KEY=your-key-here`
+   - **OpenAI (if using OpenAI embedding):**  
+     - Set your OpenAI API key as environment variable or in `.env` (`OPENAI_API_KEY=your-openai-key`)
+   - _You can use only SBERT (local) if you don't wish to use external APIs._
+
+4. **Run the app**
+
+    ```bash
+    streamlit run app.py
+    ```
+---
+
+## 📂 File Structure
+Candidate_recommandation/
+│
+├── .streamlit/
+│   └── secrets.toml
+│
+├── .venv/
+├── data/
+├── fine-tuned-sbert-resume-matcher/
+│
+├── utils/
+│   ├── __init__.py
+│   ├── embedding.py
+│   ├── parsing.py
+│   ├── section_extract.py
+│   ├── similarity.py
+│   └── summary.py
+│
+├── .gitignore
+├── app.py
+├── README.md
+├── requirements.txt
+└── temp.py
+
+---
+
 ## 🖥️ Usage
 
 1. Paste the **job description** in the provided box.
@@ -34,9 +90,6 @@ Built with **Streamlit** and supports multiple embedding models (SBERT, OpenAI, 
 4. Click **Run** (automatically updates).
 5. See the **top recommended candidates**, their similarity scores, and AI summaries.
 6. **Download all results as an Excel file** with one click.
-
----
-
 
 ---
 
@@ -70,4 +123,5 @@ _Contact: [darjijay972@gmail.com](mailto:darjijay972@gmail.com)_
 
 
 ## 📂 File Structure
+
 
