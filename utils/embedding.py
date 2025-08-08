@@ -9,12 +9,15 @@ from sentence_transformers import SentenceTransformer
 _sbert_models = {}
 
 def get_sbert_model(model_name="all-MiniLM-L6-v2"):
-    # Accept both base and local fine-tuned model names or paths
+    # Map the demo string to your Hugging Face model
+    if model_name == "fine-tuned-sbert-resume-matcher":
+        model_name = "Jayd972/fine-tuned-sbert-resume-matcher"
     key = os.path.abspath(model_name) if os.path.isdir(model_name) else model_name
     if key not in _sbert_models:
         print(f"Loading SBERT model from: {model_name}")
         _sbert_models[key] = SentenceTransformer(model_name)
     return _sbert_models[key]
+
 
 def sbert_embed_text(text, model_name="all-MiniLM-L6-v2"):
     model = get_sbert_model(model_name)
@@ -80,3 +83,4 @@ def embed_many(texts, model_type="sbert", model_name="all-MiniLM-L6-v2"):
         return gemini_embed_many(texts)
     else:
         raise ValueError(f"Unknown model_type: {model_type}")
+
