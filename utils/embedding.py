@@ -5,6 +5,9 @@ import numpy as np
 import google.generativeai as genai
 from sentence_transformers import SentenceTransformer
 
+
+from dotenv import load_dotenv
+load_dotenv()
 # ---------- SBERT ----------
 _sbert_models = {}
 
@@ -83,4 +86,5 @@ def embed_many(texts, model_type="sbert", model_name="all-MiniLM-L6-v2"):
         return gemini_embed_many(texts)
     else:
         raise ValueError(f"Unknown model_type: {model_type}")
+
 
