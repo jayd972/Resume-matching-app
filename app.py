@@ -134,7 +134,7 @@ if model_choice == "Base SBERT (all-MiniLM-L6-v2)":
     model_name = "all-MiniLM-L6-v2"
 elif model_choice == "Fine-Tuned SBERT (model overfitted (Just for the demonstration))":
     embedding_type = "sbert"
-    model_name = "fine-tuned-sbert-resume-matcher"
+    model_name = "Jayd972/fine-tuned-sbert-resume-matcher"
 elif model_choice == "OpenAI (text-embedding-3-small)":
     embedding_type = "openai"
     model_name = None
@@ -230,3 +230,4 @@ else:
     st.info("Upload resumes and paste a job description to see recommendations.")
 
 st.caption("🔗 Powered by Streamlit, Sentence Transformers, OpenAI, and Gemini API.")
+
