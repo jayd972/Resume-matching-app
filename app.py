@@ -16,8 +16,7 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 load_dotenv()
 
-# Set your Gemini API key (change as needed)
-os.environ["GEMINI_API_KEY"] = "AIzaSyBatxt0LAg_BVaDksQtEI06_6fC8feY9v8"
+os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
 
 # --------- Name Extraction Section ---------
 def extract_name_regex(text):
@@ -230,4 +229,5 @@ else:
     st.info("Upload resumes and paste a job description to see recommendations.")
 
 st.caption("🔗 Powered by Streamlit, Sentence Transformers, OpenAI, and Gemini API.")
+
 
