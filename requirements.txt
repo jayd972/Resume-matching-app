@@ -6,3 +6,4 @@ python-docx
 google-generativeai
 openai
 torch
+python-dotenv
